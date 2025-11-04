@@ -21,6 +21,15 @@
             <Label Text="Mobile Number" FontAttributes="Bold"/>
             <Entry Text="{Binding MobileNumber}" Keyboard="Telephone" MaxLength="10"/>
             <Label Text="{Binding MobileError}" TextColor="Red" FontSize="12"/>
+            <Button Text="Send OTP" Command="{Binding SendOtpCommand}" />
+
+            <!--OTP Verification  -->
+            <StackLayout IsVisible="{Binding IsOtpSent}">
+                <Label Text="Enter OTP"/>
+                <Entry Text="{Binding EnteredOtp}" Keyboard="Numeric" MaxLength="6"/>
+                <Label Text="{Binding OtpError}" TextColor="Red" FontSize="12"/>
+                <Button Text="Verify OTP" Command="{Binding VerifyOtpCommand}" />
+            </StackLayout>
 
             <!-- Email -->
             <Label Text="Email" FontAttributes="Bold"/>
