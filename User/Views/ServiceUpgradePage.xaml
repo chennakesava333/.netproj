@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:User.ViewModels"
+             x:Class="User.Views.ServiceUpgradePage"
+             Title="ServiceUpgradePage">
+
+    <ContentPage.BindingContext>
+        <vm:ServiceRequestPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+
+            <Label Text="Upgrade Existing System" FontSize="22" FontAttributes="Bold" />
+
+            <Entry Placeholder="Customer Name" Text="{Binding CustomerName}" />
+            <Label Text="{Binding CustomerNameError}" TextColor="Red" FontSize="12"/>
+
+            <Entry Placeholder="Mobile Number" Keyboard="Telephone" Text="{Binding MobileNumber}" />
+            <Label Text="{Binding MobileNumberError}" TextColor="Red" FontSize="12"/>
+
+            <Editor Placeholder="Address" HeightRequest="80" Text="{Binding Address}" />
+
+            <Label Text="Existing System Type:" />
+            <Entry Placeholder="Existing System Type (e.g. DVR, NVR)" Text="{Binding ExistingSystemType}" />
+            <Label Text="{Binding ExistingSystemTypeError}" TextColor="Red" FontSize="12"/>
+
+            <Label Text="Number of Existing Cameras:" />
+            <Entry Placeholder="Existing Cameras" Keyboard="Numeric" Text="{Binding ExistingCamerasText}" />
+            <Label Text="{Binding ExistingCamerasError}" TextColor="Red" FontSize="12"/>
+
+            <Label Text="Number of New Cameras:" />
+            <Entry Placeholder="New Cameras" Keyboard="Numeric" Text="{Binding NewCamerasText}" />
+            <Label Text="{Binding NewCamerasError}" TextColor="Red" FontSize="12"/>
+
+            <Label Text="Preferred Upgrade Date:" />
+            <DatePicker Date="{Binding PreferredUpgradeDate}" />
+
+            <Editor Placeholder="Notes / Description" HeightRequest="100" Text="{Binding Notes}" />
+
+            <Button Text="Submit" Command="{Binding SubmitCommand}" BackgroundColor="#0078D7" TextColor="White" CornerRadius="8" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,608 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User</name>
+    </assembly>
+    <members>
+        <member name="T:User.ViewModels.DashboardPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:User.ViewModels.DashboardPageViewModel.DisplayName">
+            <inheritdoc cref="F:User.ViewModels.DashboardPageViewModel.displayName"/>
+        </member>
+        <member name="P:User.ViewModels.DashboardPageViewModel.Installations">
+            <inheritdoc cref="F:User.ViewModels.DashboardPageViewModel.installations"/>
+        </member>
+        <member name="P:User.ViewModels.DashboardPageViewModel.IsLoading">
+            <inheritdoc cref="F:User.ViewModels.DashboardPageViewModel.isLoading"/>
+        </member>
+        <member name="F:User.ViewModels.DashboardPageViewModel.imageClickedCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.DashboardPageViewModel.ImageClickedCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.DashboardPageViewModel.ImageClickedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.DashboardPageViewModel.ImageClicked"/>.</summary>
+        </member>
+        <member name="F:User.ViewModels.DashboardPageViewModel.installationSelectedCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.DashboardPageViewModel.InstallationSelectedCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.DashboardPageViewModel.InstallationSelectedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:User.ViewModels.DashboardPageViewModel.InstallationSelected(System.String)"/>.</summary>
+        </member>
+        <member name="T:User.ViewModels.LoginPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:User.ViewModels.LoginPageViewModel.Username">
+            <inheritdoc cref="F:User.ViewModels.LoginPageViewModel.username"/>
+        </member>
+        <member name="P:User.ViewModels.LoginPageViewModel.Password">
+            <inheritdoc cref="F:User.ViewModels.LoginPageViewModel.password"/>
+        </member>
+        <member name="P:User.ViewModels.LoginPageViewModel.Message">
+            <inheritdoc cref="F:User.ViewModels.LoginPageViewModel.message"/>
+        </member>
+        <member name="F:User.ViewModels.LoginPageViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.LoginPageViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.LoginPageViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.LoginPageViewModel.Login"/>.</summary>
+        </member>
+        <member name="F:User.ViewModels.LoginPageViewModel.goToRegisterCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.LoginPageViewModel.GoToRegisterCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.LoginPageViewModel.GoToRegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.LoginPageViewModel.GoToRegister"/>.</summary>
+        </member>
+        <member name="T:User.ViewModels.NewInstallationViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.Id">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.id"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.UserName">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.userName"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.CustomerName">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.customerName"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.ContactNumber">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.contactNumber"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.Email">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.email"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.InstallDate">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.installDate"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.Pincode">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.pincode"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.Locality">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.locality"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.Address">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.address"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.City">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.city"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.SelectedState">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.selectedState"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.Landmark">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.landmark"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.AlternatePhone">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.alternatePhone"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.IsHome">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.isHome"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.IsWork">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.isWork"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.InternetConnected">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.internetConnected"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.MobileAppConfigured">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.mobileAppConfigured"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.AppName">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.appName"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.ViewOnAndroid">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.viewOnAndroid"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.ViewOniPhone">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.viewOniPhone"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.ViewOnDesktop">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.viewOnDesktop"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.InstalledChecked">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.installedChecked"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.DemoReceived">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.demoReceived"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.UnderstoodOperation">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.understoodOperation"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.CustomerSign">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.customerSign"/>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.TechnicianSign">
+            <inheritdoc cref="F:User.ViewModels.NewInstallationViewModel.technicianSign"/>
+        </member>
+        <member name="F:User.ViewModels.NewInstallationViewModel.addSystemItemCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.NewInstallationViewModel.AddSystemItemCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.AddSystemItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.NewInstallationViewModel.AddSystemItem"/>.</summary>
+        </member>
+        <member name="F:User.ViewModels.NewInstallationViewModel.addCameraPlacementCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.NewInstallationViewModel.AddCameraPlacementCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.AddCameraPlacementCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.NewInstallationViewModel.AddCameraPlacement"/>.</summary>
+        </member>
+        <member name="F:User.ViewModels.NewInstallationViewModel.getCurrentLocationCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.NewInstallationViewModel.GetCurrentLocationCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.GetCurrentLocationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.NewInstallationViewModel.GetCurrentLocationAsync"/>.</summary>
+        </member>
+        <member name="F:User.ViewModels.NewInstallationViewModel.submitInstallationCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.NewInstallationViewModel.SubmitInstallationCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.NewInstallationViewModel.SubmitInstallationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.NewInstallationViewModel.SubmitInstallation"/>.</summary>
+        </member>
+        <member name="T:User.ViewModels.RegistrationPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.Name">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.name"/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.MobileNumber">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.mobileNumber"/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.Email">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.email"/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.Password">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.password"/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.ConfirmPassword">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.confirmPassword"/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.PhotoPath">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.photoPath"/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.NameError">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.nameError"/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.MobileError">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.mobileError"/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.EmailError">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.emailError"/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.PasswordError">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.passwordError"/>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.ConfirmPasswordError">
+            <inheritdoc cref="F:User.ViewModels.RegistrationPageViewModel.confirmPasswordError"/>
+        </member>
+        <member name="F:User.ViewModels.RegistrationPageViewModel.registerCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.RegistrationPageViewModel.RegisterCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.RegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.RegistrationPageViewModel.OnRegister"/>.</summary>
+        </member>
+        <member name="F:User.ViewModels.RegistrationPageViewModel.pickPhotoCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.RegistrationPageViewModel.PickPhotoCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.RegistrationPageViewModel.PickPhotoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.RegistrationPageViewModel.PickPhotoAsync"/>.</summary>
+        </member>
+        <member name="T:User.ViewModels.ServiceRequestPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:User.ViewModels.ServiceRequestPageViewModel.newInstallationCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.ServiceRequestPageViewModel.NewInstallationCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.ServiceRequestPageViewModel.NewInstallationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.ServiceRequestPageViewModel.NewInstallation"/>.</summary>
+        </member>
+        <member name="F:User.ViewModels.ServiceRequestPageViewModel.serviceUpgradeCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.ServiceRequestPageViewModel.ServiceUpgradeCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.ServiceRequestPageViewModel.ServiceUpgradeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.ServiceRequestPageViewModel.ServiceUpgrade"/>.</summary>
+        </member>
+        <member name="T:User.ViewModels.ServiceUpgradePageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.CustomerName">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.customerName"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.MobileNumber">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.mobileNumber"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.Address">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.address"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.ExistingSystemType">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.existingSystemType"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.ExistingCamerasText">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.existingCamerasText"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.NewCamerasText">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.newCamerasText"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.PreferredUpgradeDate">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.preferredUpgradeDate"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.Notes">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.notes"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.CustomerNameError">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.customerNameError"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.MobileNumberError">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.mobileNumberError"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.ExistingSystemTypeError">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.existingSystemTypeError"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.ExistingCamerasError">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.existingCamerasError"/>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.NewCamerasError">
+            <inheritdoc cref="F:User.ViewModels.ServiceUpgradePageViewModel.newCamerasError"/>
+        </member>
+        <member name="F:User.ViewModels.ServiceUpgradePageViewModel.submitCommand">
+            <summary>The backing field for <see cref="P:User.ViewModels.ServiceUpgradePageViewModel.SubmitCommand"/>.</summary>
+        </member>
+        <member name="P:User.ViewModels.ServiceUpgradePageViewModel.SubmitCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:User.ViewModels.ServiceUpgradePageViewModel.Submit"/>.</summary>
+        </member>
+        <member name="T:User.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Installations">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Installations" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Username">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Username" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Message">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Message" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Id">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Id" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CustomerName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CustomerName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ContactNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ContactNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InstallDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InstallDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Pincode">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Pincode" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Locality">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Locality" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Address">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Address" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.City">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "City" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Landmark">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Landmark" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AlternatePhone">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AlternatePhone" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsHome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsHome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsWork">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsWork" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InternetConnected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InternetConnected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MobileAppConfigured">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MobileAppConfigured" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AppName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AppName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ViewOnAndroid">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ViewOnAndroid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ViewOniPhone">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ViewOniPhone" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ViewOnDesktop">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ViewOnDesktop" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InstalledChecked">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InstalledChecked" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DemoReceived">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DemoReceived" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UnderstoodOperation">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UnderstoodOperation" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CustomerSign">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CustomerSign" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TechnicianSign">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TechnicianSign" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MobileNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MobileNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PhotoPath">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PhotoPath" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NameError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NameError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MobileError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MobileError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EmailError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EmailError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PasswordError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PasswordError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmPasswordError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmPasswordError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ExistingSystemType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ExistingSystemType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ExistingCamerasText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ExistingCamerasText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewCamerasText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewCamerasText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PreferredUpgradeDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PreferredUpgradeDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Notes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Notes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CustomerNameError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CustomerNameError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MobileNumberError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MobileNumberError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ExistingSystemTypeError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ExistingSystemTypeError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ExistingCamerasError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ExistingCamerasError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewCamerasError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewCamerasError" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Installations">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Installations" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Username">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Username" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Message">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Message" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Id">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Id" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CustomerName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CustomerName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ContactNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ContactNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InstallDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InstallDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Pincode">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Pincode" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Locality">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Locality" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Address">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Address" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.City">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "City" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Landmark">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Landmark" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AlternatePhone">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AlternatePhone" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsHome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsHome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsWork">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsWork" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InternetConnected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InternetConnected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MobileAppConfigured">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MobileAppConfigured" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AppName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AppName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ViewOnAndroid">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ViewOnAndroid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ViewOniPhone">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ViewOniPhone" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ViewOnDesktop">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ViewOnDesktop" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InstalledChecked">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InstalledChecked" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DemoReceived">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DemoReceived" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UnderstoodOperation">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UnderstoodOperation" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CustomerSign">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CustomerSign" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TechnicianSign">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TechnicianSign" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MobileNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MobileNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PhotoPath">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PhotoPath" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NameError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NameError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MobileError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MobileError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EmailError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EmailError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PasswordError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PasswordError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmPasswordError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmPasswordError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ExistingSystemType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ExistingSystemType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ExistingCamerasText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ExistingCamerasText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewCamerasText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewCamerasText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PreferredUpgradeDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PreferredUpgradeDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Notes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Notes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CustomerNameError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CustomerNameError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MobileNumberError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MobileNumberError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ExistingSystemTypeError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ExistingSystemTypeError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ExistingCamerasError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ExistingCamerasError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewCamerasError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewCamerasError" generated properties.</summary>
+        </member>
+    </members>
+</doc>

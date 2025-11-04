@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:User.ViewModels"
+    x:Class="User.Views.DashboardPage"
+    Title="Dashboard">
+
+    <!-- ✅ Bind to ViewModel -->
+    <ContentPage.BindingContext>
+        <vm:DashboardPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <!-- Display Logged-in User -->
+            <Label Text="{Binding DisplayName}"
+                   FontSize="20"
+                   TextColor="Blue"
+                   HorizontalOptions="Center" />
+
+            <!-- Profile Image -->
+            <Frame WidthRequest="60"
+                   HeightRequest="60"
+                   CornerRadius="30"
+                   Padding="0"
+                   HasShadow="False"
+                   HorizontalOptions="End"
+                   VerticalOptions="Start">
+                <ImageButton Source="https://image.freepik.com/vector-gratis/vector-diseno-plantilla-logotipo-servicio_20029-570.jpg"
+                             Command="{Binding ImageClickedCommand}"
+                             BackgroundColor="Transparent"
+                             Aspect="AspectFill" />
+            </Frame>
+
+            <!-- ✅ Installation List -->
+            <ListView ItemsSource="{Binding Installations}"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" 
+                                         Padding="10" 
+                                         Spacing="10" 
+                                         BackgroundColor="White">
+
+                                <!-- ✅ Corrected Namespace for Tap Command -->
+                                <Label Text="{Binding Id, StringFormat='ID: {0}'}" 
+                                       FontAttributes="Bold"
+                                       TextColor="DarkBlue">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:DashboardPageViewModel}}, Path=InstallationSelectedCommand}"
+                                            CommandParameter="{Binding Id}" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+                                <Label Text="{Binding CustomerName}" 
+                                       FontAttributes="Bold" 
+                                       TextColor="Black" />
+
+                                <Label Text="{Binding City}" />
+
+                                <Label Text="{Binding InstallDate, StringFormat='{0:dd MMM yyyy}'}" 
+                                       FontSize="12" 
+                                       TextColor="Gray" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

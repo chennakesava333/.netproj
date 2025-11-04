@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:User.ViewModels"
+             x:Class="User.Views.NewInstallationPage"
+             Title="NewInstallationPage">
+
+    <ContentPage.BindingContext>
+        <vm:NewInstallationViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25">
+
+            <!-- 1. Customer Details -->
+            <Frame BackgroundColor="black" CornerRadius="8">
+                <VerticalStackLayout>
+                    <Label Text="1. Customer Details"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           BackgroundColor="#007BFF"
+                           TextColor="white"
+                           Padding="10,5"/>
+
+                    <Entry Placeholder="Customer Name" Text="{Binding CustomerName}" TextColor="White"/>
+                    <Entry Placeholder="10-digit Mobile Number" Keyboard="Telephone" Text="{Binding ContactNumber}" TextColor="White"/>
+                    <Entry Placeholder="Email Address" Keyboard="Email" Text="{Binding Email}" TextColor="White"/>
+
+                    <Label Text="Installation Date :" Padding="5" TextColor="White"/>
+                    <DatePicker Date="{Binding InstallDate}" TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- 2. Address Section -->
+            <Frame BackgroundColor="#1E1E1E" CornerRadius="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="2. Customer Address Details"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           BackgroundColor="#007BFF"
+                           TextColor="White"
+                           Padding="10,5"/>
+
+                    <!-- Use My Current Location -->
+                    <Button Text="📍 Use My Current Location"
+                            BackgroundColor="#007AFF"
+                            TextColor="White"
+                            CornerRadius="8"
+                            Command="{Binding GetCurrentLocationCommand}" />
+
+                    <!-- Pincode & Locality -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                        <Entry Placeholder="Pincode" Text="{Binding Pincode}" Keyboard="Numeric" />
+                        <Entry Placeholder="Locality" Text="{Binding Locality}" Grid.Column="1" />
+                    </Grid>
+
+                    <!-- Address -->
+                    <Editor Placeholder="Address (Area and Street)"
+                            Text="{Binding Address}"
+                            AutoSize="TextChanges"
+                            HeightRequest="80"
+                            BackgroundColor="#F5F5F5"
+                             TextColor="Black" FontAttributes="Bold"/>
+
+                    <!-- City and State -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                        <Entry Placeholder="City/District/Town" Text="{Binding City}" />
+                        <Picker Title="--Select State--"
+                                ItemsSource="{Binding States}"
+                                SelectedItem="{Binding SelectedState}"
+                                Grid.Column="1" />
+                    </Grid>
+
+                    <!-- Landmark and Alternate Phone -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                        <Entry Placeholder="Landmark (Optional)" Text="{Binding Landmark}" />
+                        <Entry Placeholder="Alternate Phone (Optional)" Keyboard="Telephone" Text="{Binding AlternatePhone}" Grid.Column="1" />
+                    </Grid>
+
+                    <!-- Address Type -->
+                    <HorizontalStackLayout Spacing="20">
+                        <Label Text="Address Type" FontAttributes="Bold" VerticalOptions="Center" />
+                        <RadioButton Content="Home" IsChecked="{Binding IsHome}" GroupName="AddressType" />
+                        <RadioButton Content="Work" IsChecked="{Binding IsWork}" GroupName="AddressType" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- 3. System Details -->
+            <Frame BackgroundColor="black" CornerRadius="8">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="3. System Details"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           BackgroundColor="#007BFF"
+                           TextColor="white"
+                           Padding="10,5"/>
+
+                    <CollectionView ItemsSource="{Binding SystemDetails}">
+                        <CollectionView.Header>
+                            <Grid ColumnDefinitions="*,*,*,*">
+                                <Label Text="Item" FontAttributes="Bold" Grid.Column="0"/>
+                                <Label Text="Quantity" FontAttributes="Bold" Grid.Column="1"/>
+                                <Label Text="Brand/Model" FontAttributes="Bold" Grid.Column="2"/>
+                                <Label Text="Serial Number" FontAttributes="Bold" Grid.Column="3"/>
+                            </Grid>
+                        </CollectionView.Header>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid ColumnDefinitions="*,*,*,*">
+                                    <Entry Text="{Binding ItemName}" Placeholder="Item Name" Grid.Column="0" TextColor="White"/>
+                                    <Entry Text="{Binding Quantity}" Placeholder="Qty" Keyboard="Numeric" Grid.Column="1" WidthRequest="60" TextColor="White"/>
+                                    <Entry Text="{Binding BrandModel}" Placeholder="Brand/Model" Grid.Column="2" TextColor="White"/>
+                                    <Entry Text="{Binding SerialNumber}" Placeholder="Serial Number" Grid.Column="3" TextColor="White"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <Button Text="+ Add Item"
+                            Command="{Binding AddSystemItemCommand}"
+                            BackgroundColor="#28a745"
+                            TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- 4. Camera Placement Details -->
+            <Frame BackgroundColor="black" CornerRadius="8">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="4. Camera Placement Details"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           BackgroundColor="#007BFF"
+                           TextColor="White"
+                           Padding="10,5"/>
+
+                    <CollectionView ItemsSource="{Binding CameraPlacements}">
+                        <CollectionView.Header>
+                            <Grid ColumnDefinitions="*,*,*,*">
+                                <Label Text="Camera No." FontAttributes="Bold" Grid.Column="0"/>
+                                <Label Text="Location Description" FontAttributes="Bold" Grid.Column="1"/>
+                                <Label Text="Indoor/Outdoor" FontAttributes="Bold" Grid.Column="2"/>
+                                <Label Text="Type" FontAttributes="Bold" Grid.Column="3"/>
+                            </Grid>
+                        </CollectionView.Header>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid ColumnDefinitions="*,*,*,*">
+                                    <Label Text="{Binding CameraNo}" VerticalTextAlignment="Center" Grid.Column="0"/>
+                                    <Entry Text="{Binding LocationDescription}" Placeholder="Location" Grid.Column="1" TextColor="White"/>
+                                    <Picker ItemsSource="{Binding IndoorOutdoorOptions}" SelectedItem="{Binding IndoorOutdoor}" Grid.Column="2"/>
+                                    <Picker ItemsSource="{Binding TypeOptions}" SelectedItem="{Binding Type}" Grid.Column="3"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <Button Text="+ Add Camera"
+                            Command="{Binding AddCameraPlacementCommand}"
+                            BackgroundColor="#28a745"
+                            TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- 5. Network & Mobile Configuration -->
+            <Frame BackgroundColor="black" CornerRadius="8">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="5. Network  Mobile Configuration"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           BackgroundColor="#007BFF"
+                           TextColor="White"
+                           Padding="10,5"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <CheckBox IsChecked="{Binding InternetConnected}" />
+                        <Label Text="DVR/NVR Connected to Internet" TextColor="White"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <CheckBox IsChecked="{Binding MobileAppConfigured}" />
+                        <Label Text="Mobile App Installed  Configured" TextColor="White"/>
+                    </StackLayout>
+
+                    <Entry Placeholder="App Name" Text="{Binding AppName}" TextColor="White"/>
+                    <Label Text="Viewing Enabled On:" FontAttributes="Bold" TextColor="White"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <CheckBox IsChecked="{Binding ViewOnAndroid}" />
+                        <Label Text="Android" TextColor="White"/>
+                        <CheckBox IsChecked="{Binding ViewOniPhone}" />
+                        <Label Text="iPhone" TextColor="White"/>
+                        <CheckBox IsChecked="{Binding ViewOnDesktop}" />
+                        <Label Text="Desktop/Web" TextColor="White"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- 6. Customer Acknowledgment -->
+            <Frame BackgroundColor="black" CornerRadius="8">
+                <VerticalStackLayout>
+                    <Label Text="6. Customer Acknowledgment"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           BackgroundColor="#007BFF"
+                           TextColor="White"
+                           Padding="10,5"/>
+
+                    <CheckBox IsChecked="{Binding InstalledChecked}"/>
+                    <Label Text="All equipment installed and functioning properly" TextColor="White"/>
+                    <CheckBox IsChecked="{Binding DemoReceived}"/>
+                    <Label Text="Demonstration received" TextColor="White"/>
+                    <CheckBox IsChecked="{Binding UnderstoodOperation}"/>
+                    <Label Text="I understand how to operate the system" TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- 7. Signatures -->
+            <Frame BackgroundColor="black" CornerRadius="8">
+                <VerticalStackLayout>
+                    <Label Text="7. Signatures"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           BackgroundColor="#007BFF"
+                           TextColor="White"
+                           Padding="10,5"/>
+
+                    <Entry Placeholder="Customer Name" Text="{Binding CustomerSign}" TextColor="White"/>
+                    <Entry Placeholder="Technician Name" Text="{Binding TechnicianSign}" TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Submit Button -->
+            <Button Text="Submit Form"
+                    Command="{Binding SubmitInstallationCommand}"
+                    BackgroundColor="#007BFF"
+                    TextColor="White"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

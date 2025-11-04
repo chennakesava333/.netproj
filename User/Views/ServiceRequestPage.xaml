@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:User.ViewModels"
+             x:Class="User.Views.ServiceRequestPage"
+             Title="ServiceRequestPage">
+
+    <ContentPage.BindingContext>
+        <vm:ServiceRequestPageViewModel/>
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout
+    Padding="40"
+    Spacing="20"
+    HorizontalOptions="Center"
+    VerticalOptions="Center">
+
+        <Frame
+        BackgroundColor="White"
+        CornerRadius="6"
+        Padding="25"
+        HasShadow="True"
+        WidthRequest="400"
+        HorizontalOptions="Center">
+
+            <VerticalStackLayout Spacing="25" HorizontalOptions="Center">
+
+                <Label
+                Text="Select Your Request Type"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="Black"/>
+
+                <Button
+                Text="New CCTV Installation"
+                BackgroundColor="#28a745"
+                TextColor="White"
+                FontSize="16"
+                CornerRadius="4"
+                Command="{Binding NewInstallationCommand}"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="48"/>
+
+                <Button
+                Text="Service / Upgrade Existing "
+                BackgroundColor="#28a745"
+                TextColor="White"
+                FontSize="16"
+                CornerRadius="4"
+                Command="{Binding ServiceUpgradeCommand}"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="48"/>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
