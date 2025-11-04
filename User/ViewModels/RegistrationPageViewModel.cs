@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using User.Services;
@@ -14,6 +15,7 @@ namespace User.ViewModels
     public partial class RegistrationPageViewModel : ObservableObject
     {
         private readonly SQLiteHelper _dbHelper;
+        private Models.RegistrationModel registerModel = new Models.RegistrationModel();
 
         public RegistrationPageViewModel()
         {
@@ -27,18 +29,69 @@ namespace User.ViewModels
         [ObservableProperty] private string password = string.Empty;
         [ObservableProperty] private string confirmPassword = string.Empty;
         [ObservableProperty] private string photoPath = string.Empty;
+        [ObservableProperty] private string enteredOtp = string.Empty;
 
         // Validation Errors
+
         [ObservableProperty] private string? nameError;
         [ObservableProperty] private string? mobileError;
         [ObservableProperty] private string? emailError;
         [ObservableProperty] private string? passwordError;
         [ObservableProperty] private string? confirmPasswordError;
+        [ObservableProperty] private bool isOtpSent = false;
+        [ObservableProperty] private string? otpError;
 
         // Register Command
         [RelayCommand]
+        private async Task SendOtpAsync()
+        {
+            MobileError = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(MobileNumber) || !Regex.IsMatch(MobileNumber, @"^[0-9]{10}$"))
+            {
+                MobileError = "Enter a valid 10-digit mobile number";
+                return;
+            }
+
+            // Generate OTP
+            Random rnd = new Random();
+            registerModel.GeneratedOtp = rnd.Next(100000, 999999).ToString();
+            registerModel.MobileNumber = MobileNumber;
+
+            IsOtpSent = true;
+            await Application.Current.MainPage.DisplayAlert("OTP Sent",
+                $"OTP sent to {MobileNumber} (Demo OTP: {registerModel.GeneratedOtp})", "OK");
+        }
+
+        [RelayCommand]
+        private async Task VerifyOtpAsync()
+        {
+            if (string.IsNullOrWhiteSpace(enteredOtp))
+            {
+                OtpError = "Please enter the OTP.";
+                return;
+            }
+
+            if (enteredOtp == registerModel.GeneratedOtp)
+            {
+                registerModel.IsMobileVerified = true;
+                OtpError = string.Empty;
+                await Application.Current.MainPage.DisplayAlert("Verified", "Mobile number verified successfully!", "OK");
+            }
+            else
+            {
+                OtpError = "Invalid OTP. Please try again.";
+            }
+        }
+
+        [RelayCommand]
         private async Task OnRegister()
         {
+            if (!registerModel.IsMobileVerified)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Please verify your mobile number first", "OK");
+                return;
+            }
             // Clear previous errors
             NameError = MobileError = EmailError = PasswordError = ConfirmPasswordError = string.Empty;
 
